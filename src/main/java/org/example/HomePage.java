@@ -3,8 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
-import static java.sql.DriverManager.getDriver;
-
 public class HomePage extends BasePage {
 
     private final By productInfoLocator = By.className("product-grid-item__info");

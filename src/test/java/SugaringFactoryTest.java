@@ -1,6 +1,5 @@
 import org.example.HomePage;
 import org.example.ProductPage;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 
