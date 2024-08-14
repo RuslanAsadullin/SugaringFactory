@@ -1,16 +1,23 @@
 package org.example;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
-    WebDriver driver;
+import static java.sql.DriverManager.getDriver;
 
-    private By productInfo = By.className("product-grid-item__info");
+public class HomePage extends BasePage {
+
+    private final By productInfoLocator = By.className("product-grid-item__info");
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
+
     public void clickOnProduct() {
-        driver.findElement(productInfo).click();
+        try {
+            getDriver().findElement(productInfoLocator).click();
+        } catch (NoSuchElementException e) {
+            System.out.println("Product element not found: " + e.getMessage());
+        }
     }
 }
