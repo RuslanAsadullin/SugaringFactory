@@ -7,7 +7,6 @@ public class SugaringFactoryTest extends BaseTest {
 
     @Test
     public void testing() {
-        //selectBrowser("chrome");
         HomePage homePage = new HomePage(getDriver());
         ProductPage productPage = new ProductPage(getDriver());
         getDriver().get("https://sugaringfactory.com/");
