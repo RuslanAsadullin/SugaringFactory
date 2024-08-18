@@ -11,11 +11,12 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    public void clickOnProduct() {
+    public ProductPage clickOnProduct() {
         try {
             getDriver().findElement(productInfoLocator).click();
         } catch (NoSuchElementException e) {
             System.out.println("Product element not found: " + e.getMessage());
         }
+        return new ProductPage(getDriver());
     }
 }
